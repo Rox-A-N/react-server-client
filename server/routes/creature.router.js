@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     pool.query(sqlText)
         .then((result) => {
             console.log(`Got stuff back from the database`, result);
-            res.send(result.rows);
+            res.send(result.rows);  // the actual data
         })
         .catch((error) => {
             console.log(`Error making database query ${sqlText}`, error);
